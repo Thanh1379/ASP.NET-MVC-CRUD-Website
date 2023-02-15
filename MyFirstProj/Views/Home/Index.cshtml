@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">WEBSITE NÀY ĐƯỢC TẠO BỞI NGUYỄN ĐÌNH VIÊN THÀNH</h1>
+    <p>Vào ngày 29/10/2022</p>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="container">
+    <div style="justify-content: center; align-content: center; display:flex;">
+        <h3 id="clock"></h3>
+    </div>
+</div>
+<script>
+    var myPromise = new Promise(function (resolved) {
+        setInterval(() => {
+            var date = new Date()
+            document.getElementById("clock").innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+        }, 1000)
+    })
+
+    myPromise.then(
+        console.log("solved")
+    )
+</script>
